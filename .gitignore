@@ -1,4 +1,10 @@
-# Miscellaneous
+# ==========================================
+# Root Gitignore for Smart Attendance System
+# ==========================================
+
+# -----------------
+# OS & IDE Caches
+# -----------------
 *.class
 *.log
 *.pyc
@@ -12,38 +18,57 @@
 .swiftpm/
 migrate_working_dir/
 
-# IntelliJ related
+# IntelliJ IDEA
 *.iml
 *.ipr
 *.iws
 .idea/
+.idea_modules/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code
+.vscode/
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-/coverage/
+# -----------------
+# Frontend (Flutter)
+# -----------------
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.pub-cache/
+frontend/.pub/
+frontend/build/
+frontend/coverage/
+frontend/.config/
+frontend/lib/firebase_options.dart
 
-# Symbolication related
-app.*.symbols
+# Android build outputs
+frontend/android/app/debug/
+frontend/android/app/profile/
+frontend/android/app/release/
 
-# Obfuscation related
-app.*.map.json
+# iOS build outputs
+frontend/ios/Flutter/.last_build_id
+frontend/ios/DerivedData/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# -----------------
+# Backend (FastAPI / Python)
+# -----------------
+backend/__pycache__/
+backend/venv/
+backend/.venv/
+backend/env/
+backend/ENV/
+backend/bin/
+backend/lib/
+backend/include/
 
-.config/
+# Local databases & user data (Crucial for privacy)
+backend/embeddings.json
+backend/profile_photos/
 
-lib/firebase_options.dart
+# Security: Ignore Firebase service account credentials/keys if placed in backend
+backend/*firebase-adminsdk*.json
+backend/*.credentials.json
+backend/service-account.json
+backend/secrets.json
+backend/.env
