@@ -1,259 +1,33 @@
-# 📸 Facemark
+# 📸 Facemark Documentation Directory
 
-> A modern, AI-powered attendance management system built with **Flutter**, **FastAPI**, and **Firebase**, using facial recognition to automate attendance for educational institutions and organizations.
-
-![Status](https://img.shields.io/badge/status-active-success)
-![Flutter](https://img.shields.io/badge/Flutter-3.x-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Python-green)
-![Firebase](https://img.shields.io/badge/Firebase-Firestore-orange)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+Welcome to the documentation suite for **Facemark**, an AI-powered touchless attendance system using face recognition. This directory serves as a comprehensive developer and administrator guide.
 
 ---
 
-# Overview
+## 📚 Document Index
 
-Facemark is an AI-powered attendance platform that replaces traditional attendance methods with automated facial recognition.
+Use the directory below to navigate through the detailed specification documents:
 
-The system consists of two primary applications:
-
-* **Teacher/Kiosk App** – Automatically detects and recognizes teachers using the device camera and records attendance.
-* **Admin App** – Allows administrators to manage teachers, monitor attendance in real time, receive notifications, and access attendance history.
-
-The backend is powered by **FastAPI** and a facial recognition engine built using Python. Facial embeddings are generated during enrollment and matched during attendance to identify teachers with high accuracy.
-
----
-
-# Features
-
-## Face Recognition
-
-* Automatic face detection
-* Face enrollment
-* Face identification
-* Multiple face encoding support
-* Unknown face detection
-* Confidence threshold matching
-
-## Attendance
-
-* Automatic attendance marking
-* Entry & exit logging
-* Real-time attendance updates
-* Attendance history
-* Duplicate attendance prevention
-
-## Teacher Management
-
-* Register teachers
-* Edit teacher information
-* Delete teachers
-* Face re-enrollment
-
-## Admin Dashboard
-
-* Live teacher status
-* Search teachers
-* Attendance analytics
-* Real-time updates
-* Push notifications
-
-## Notifications
-
-* Firebase Cloud Messaging
-* Attendance alerts
-* Registration notifications
-* System updates
+| Document | Description |
+| :--- | :--- |
+| 📋 **[Product Requirements (PRD)](file:///D:/GitHub/face-mark/docs/PRD.md)** | Defines core goals, target personas, scope limits, release schedules, and success criteria. |
+| 🛠️ **[Feature Specifications](file:///D:/GitHub/face-mark/docs/FEATURE_SPEC.md)** | Lists in-depth functional workflows, input validation rules, edge cases, and acceptance tests. |
+| 🏗️ **[System Architecture](file:///D:/GitHub/face-mark/docs/ARCHITECTURE.md)** | Maps high-level component diagrams, layered architecture partitions, and sequential request flows. |
+| 🗄️ **[Database Schema](file:///D:/GitHub/face-mark/docs/DATABASE_SCHEMA.md)** | Details Firestore collection formats, field types, relationships, local embedding structures, and indexes. |
+| 🔌 **[Backend API Spec](file:///D:/GitHub/face-mark/docs/API_SPEC.md)** | Outlines available FastAPI endpoints, request schemas, response bodies, and HTTP status codes. |
+| 👁️ **[Face Recognition Engine](file:///D:/GitHub/face-mark/docs/FACE_RECOGNITION.md)** | Explains computer vision algorithms, embedding generation, Euclidean distance checks, and self-learning loops. |
+| 🎨 **[UI/UX Specifications](file:///D:/GitHub/face-mark/docs/UI_UX_SPEC.md)** | Details screen layout designs, user navigation flows, wireframes, and widget behaviors. |
+| 💻 **[Development Guide](file:///D:/GitHub/face-mark/docs/DEVELOPMENT_GUIDE.md)** | Step-by-step instructions for local setups, virtual environments, configuration keys, and error debugging. |
+| 🚀 **[Deployment Guide](file:///D:/GitHub/face-mark/docs/DEPLOYMENT.md)** | Instructions for staging/production deployments, Firebase CLI setups, and Firestore rule uploads. |
+| 🗺️ **[Product Roadmap](file:///D:/GitHub/face-mark/docs/ROADMAP.md)** | Lists development phases, feature milestones (anti-spoofing, offline sync), and release releases. |
+| 🔒 **[Security Specifications](file:///D:/GitHub/face-mark/docs/SECURITY.md)** | Covers system authentication boundaries, credentials management, local database security, and Firestore rules. |
+| 📊 **[Technology Stack Matrix](file:///D:/GitHub/face-mark/docs/TECH_STACK.md)** | Evaluates tool selections (Flutter, FastAPI, Firestore, dlib), constraints, and alternative analyses. |
+| 📂 **[Project Folder Structure](file:///D:/GitHub/face-mark/docs/PROJECT_STRUCTURE.md)** | Provides a folder directory map for the mono-repo layout. |
+| 🔎 **[Product Scope Boundaries](file:///D:/GitHub/face-mark/docs/PRODUCT_SCOPE.md)** | Outlines boundary definitions of system components. |
 
 ---
 
-# Tech Stack
-
-| Layer               | Technology               |
-| ------------------- | ------------------------ |
-| Frontend            | Flutter                  |
-| Language            | Dart                     |
-| Backend             | FastAPI                  |
-| Backend Language    | Python                   |
-| Database            | Cloud Firestore          |
-| Authentication      | Firebase Authentication  |
-| Face Detection      | Google ML Kit            |
-| Face Recognition    | face_recognition + dlib  |
-| Notifications       | Firebase Cloud Messaging |
-| Networking          | REST APIs                |
-| Image Processing    | OpenCV                   |
-| Numerical Computing | NumPy                    |
-
----
-
-# System Architecture
-
-```text
-                +----------------------+
-                |     Flutter App      |
-                +----------+-----------+
-                           |
-                     REST API Calls
-                           |
-                           v
-                +----------------------+
-                |    FastAPI Backend   |
-                +----------+-----------+
-                           |
-         +-----------------+------------------+
-         |                                    |
-         v                                    v
- Face Recognition Engine             Cloud Firestore
-         |                                    |
-         +-----------------+------------------+
-                           |
-                           v
-                 Firebase Cloud Messaging
-```
-
----
-
-# Project Structure
-
-```text
-facemark/
-
-├── frontend/
-│   ├── lib/
-│   ├── assets/
-│   └── pubspec.yaml
-│
-├── backend/
-│   ├── routes/
-│   ├── services/
-│   ├── models/
-│   ├── utils/
-│   ├── embeddings/
-│   └── main.py
-│
-├── docs/
-│
-└── README.md
-```
-
----
-
-# Documentation
-
-Complete project documentation can be found in the `docs` directory.
-
-| Document             | Description                   |
-| -------------------- | ----------------------------- |
-| PRD.md               | Product Requirements Document |
-| FEATURE_SPEC.md      | Functional specifications     |
-| TECH_STACK.md        | Technology decisions          |
-| ARCHITECTURE.md      | System architecture           |
-| PROJECT_STRUCTURE.md | Folder organization           |
-| DATABASE_SCHEMA.md   | Firestore schema              |
-| API_SPEC.md          | Backend API documentation     |
-| UI_UX_SPEC.md        | Screen specifications         |
-| FACE_RECOGNITION.md  | Recognition engine            |
-| SECURITY.md          | Security architecture         |
-| DEVELOPMENT_GUIDE.md | Local development             |
-| DEPLOYMENT.md        | Production deployment         |
-
----
-
-# Getting Started
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/<username>/facemark.git
-cd facemark
-```
-
----
-
-## Backend
-
-```bash
-cd backend
-
-python -m venv venv
-
-source venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the backend:
-
-```bash
-uvicorn main:app --reload
-```
-
-Backend URL:
-
-```
-http://localhost:8000
-```
-
-Swagger UI:
-
-```
-http://localhost:8000/docs
-```
-
----
-
-## Frontend
-
-```bash
-cd frontend
-
-flutter pub get
-
-flutter run
-```
-
----
-
-# Screenshots
-
-> Screenshots will be added once the UI is finalized.
-
----
-
-# Roadmap
-
-* Face Anti-Spoofing
-* Offline Attendance Sync
-* Attendance Analytics
-* Multi-Campus Support
-* QR Code Fallback
-* Export Reports
-* Role-Based Access Control
-* Attendance Reports
-* Dashboard Analytics
-
----
-
-# Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-Please read the contribution guidelines before submitting pull requests.
-
----
-
-# License
-
-This project is licensed under the MIT License.
-
----
-
-# Author
-
-**Akhil Tyagi**
-
-Computer Engineering Student
-Flutter Developer • Backend Developer • AI Enthusiast
+## 🛠️ Quick Directory Links
+*   **[Root Directory](file:///D:/GitHub/face-mark/)**
+*   **[Frontend Source](file:///D:/GitHub/face-mark/frontend)**
+*   **[Backend Source](file:///D:/GitHub/face-mark/backend)**

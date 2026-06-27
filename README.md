@@ -28,6 +28,25 @@ face-mark/
 - [backend/](file:///D:/GitHub/face-mark/backend) contains the Python FastAPI backend, responsible for processing and storing face embeddings and synchronizing with Cloud Firestore.
 - [docs/](file:///D:/GitHub/face-mark/docs) contains all specifications, product requirements (PRDs), and design documents.
 
+## 📚 Documentation Index
+
+A complete set of manuals and specifications is maintained in the [docs/](file:///D:/GitHub/face-mark/docs) folder:
+
+*   **[Product Requirements Document (PRD)](file:///D:/GitHub/face-mark/docs/PRD.md)** — Core goals, target audience, MVP features, and success metrics.
+*   **[Functional Feature Specification](file:///D:/GitHub/face-mark/docs/FEATURE_SPEC.md)** — In-depth specifications, validation rules, and acceptance criteria for each user-facing feature.
+*   **[System Architecture](file:///D:/GitHub/face-mark/docs/ARCHITECTURE.md)** — Component layouts, layered interface boundaries, and request sequence flows.
+*   **[Database Schema specifications](file:///D:/GitHub/face-mark/docs/DATABASE_SCHEMA.md)** — Document-oriented Firestore collections, ER diagrams, validation rules, and embedding models.
+*   **[Backend API Specifications](file:///D:/GitHub/face-mark/docs/API_SPEC.md)** — Interactive API routes, request parameters, JSON validation models, and response structures.
+*   **[Face Recognition Engine Design](file:///D:/GitHub/face-mark/docs/FACE_RECOGNITION.md)** — Computer vision pipelines (detection, encoding, normalization, centroid mapping) and thresholds.
+*   **[User Interface & UX Specifications](file:///D:/GitHub/face-mark/docs/UI_UX_SPEC.md)** — Screen flows, design mockups, wireframes, and widget layouts.
+*   **[Local Development Setup Guide](file:///D:/GitHub/face-mark/docs/DEVELOPMENT_GUIDE.md)** — Workspace configurations, dependency setup, configuration environments, and debugging logs.
+*   **[System Deployment Guide](file:///D:/GitHub/face-mark/docs/DEPLOYMENT.md)** — Production hosting, Cloud Firestore security rule deploys, and operations setup.
+*   **[Product Roadmap](file:///D:/GitHub/face-mark/docs/ROADMAP.md)** — Phased release timelines and development milestones (offline sync, anti-spoofing).
+*   **[System Security Design](file:///D:/GitHub/face-mark/docs/SECURITY.md)** — Data bounds, request auth checks, and Firestore collection validation scopes.
+*   **[Technology Decision Matrix](file:///D:/GitHub/face-mark/docs/TECH_STACK.md)** — Evaluation of options (Flutter vs Native, FastAPI vs Node.js, Cloud Firestore vs local SQL).
+*   **[Project Folder Structure Map](file:///D:/GitHub/face-mark/docs/PROJECT_STRUCTURE.md)** — Directory trees for the unified mono-repo.
+*   **[Documentation Hub Directory](file:///D:/GitHub/face-mark/docs/README.md)** — Centralized entry point linking all documentation files.
+
 ---
 
 ## ⚡ Quick Start
